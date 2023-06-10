@@ -39,6 +39,9 @@ namespace UASIP.Forms
             this.SearchButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.UserViewGrid = new System.Windows.Forms.DataGridView();
+            this.PageNum = new System.Windows.Forms.Label();
+            this.NxPageButton = new System.Windows.Forms.Button();
+            this.PrRageButton = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserViewGrid)).BeginInit();
             this.SuspendLayout();
@@ -51,7 +54,7 @@ namespace UASIP.Forms
             this.UserSearchingBox.Location = new System.Drawing.Point(161, 53);
             this.UserSearchingBox.MaxLength = 50;
             this.UserSearchingBox.Name = "UserSearchingBox";
-            this.UserSearchingBox.Size = new System.Drawing.Size(580, 26);
+            this.UserSearchingBox.Size = new System.Drawing.Size(380, 26);
             this.UserSearchingBox.TabIndex = 12;
             // 
             // menuStrip1
@@ -67,7 +70,7 @@ namespace UASIP.Forms
             this.refreshToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(864, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(664, 31);
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -115,7 +118,7 @@ namespace UASIP.Forms
             this.SearchButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.SearchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SearchButton.ForeColor = System.Drawing.Color.PaleTurquoise;
-            this.SearchButton.Location = new System.Drawing.Point(756, 50);
+            this.SearchButton.Location = new System.Drawing.Point(556, 50);
             this.SearchButton.Name = "SearchButton";
             this.SearchButton.Size = new System.Drawing.Size(96, 32);
             this.SearchButton.TabIndex = 14;
@@ -148,16 +151,54 @@ namespace UASIP.Forms
             this.UserViewGrid.RowHeadersWidth = 51;
             this.UserViewGrid.RowTemplate.Height = 24;
             this.UserViewGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.UserViewGrid.Size = new System.Drawing.Size(840, 320);
+            this.UserViewGrid.Size = new System.Drawing.Size(640, 324);
             this.UserViewGrid.TabIndex = 11;
             this.UserViewGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserViewGrid_CellContentClick);
             this.UserViewGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserViewGrid_CellDoubleClick);
+            // 
+            // PageNum
+            // 
+            this.PageNum.AutoSize = true;
+            this.PageNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PageNum.Location = new System.Drawing.Point(12, 437);
+            this.PageNum.Name = "PageNum";
+            this.PageNum.Size = new System.Drawing.Size(53, 20);
+            this.PageNum.TabIndex = 15;
+            this.PageNum.Text = "label2";
+            this.PageNum.Click += new System.EventHandler(this.PageNum_Click);
+            // 
+            // NxPageButton
+            // 
+            this.NxPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.NxPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NxPageButton.Location = new System.Drawing.Point(626, 431);
+            this.NxPageButton.Name = "NxPageButton";
+            this.NxPageButton.Size = new System.Drawing.Size(26, 26);
+            this.NxPageButton.TabIndex = 16;
+            this.NxPageButton.Text = ">";
+            this.NxPageButton.UseVisualStyleBackColor = false;
+            this.NxPageButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // PrRageButton
+            // 
+            this.PrRageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.PrRageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrRageButton.Location = new System.Drawing.Point(594, 431);
+            this.PrRageButton.Name = "PrRageButton";
+            this.PrRageButton.Size = new System.Drawing.Size(26, 26);
+            this.PrRageButton.TabIndex = 17;
+            this.PrRageButton.Text = "<";
+            this.PrRageButton.UseVisualStyleBackColor = false;
+            this.PrRageButton.Click += new System.EventHandler(this.PrRageButton_Click);
             // 
             // UserView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(864, 433);
+            this.ClientSize = new System.Drawing.Size(664, 475);
+            this.Controls.Add(this.PrRageButton);
+            this.Controls.Add(this.NxPageButton);
+            this.Controls.Add(this.PageNum);
             this.Controls.Add(this.UserSearchingBox);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.SearchButton);
@@ -165,6 +206,7 @@ namespace UASIP.Forms
             this.Controls.Add(this.UserViewGrid);
             this.Name = "UserView";
             this.Text = "View Users";
+            this.Load += new System.EventHandler(this.UserView_Load_1);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserViewGrid)).EndInit();
@@ -185,5 +227,8 @@ namespace UASIP.Forms
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView UserViewGrid;
+        private System.Windows.Forms.Label PageNum;
+        private System.Windows.Forms.Button NxPageButton;
+        private System.Windows.Forms.Button PrRageButton;
     }
 }

@@ -40,6 +40,10 @@ namespace UASIP.Forms
             this.RoleSearchingBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SearchButton = new System.Windows.Forms.Button();
+            this.PrRageButton = new System.Windows.Forms.Button();
+            this.NxPageButton = new System.Windows.Forms.Button();
+            this.PageNum = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RoleViewGrid)).BeginInit();
             this.SuspendLayout();
@@ -114,7 +118,7 @@ namespace UASIP.Forms
             this.RoleViewGrid.RowHeadersWidth = 51;
             this.RoleViewGrid.RowTemplate.Height = 24;
             this.RoleViewGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.RoleViewGrid.Size = new System.Drawing.Size(640, 320);
+            this.RoleViewGrid.Size = new System.Drawing.Size(640, 324);
             this.RoleViewGrid.TabIndex = 1;
             this.RoleViewGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoleViewGrid_CellContentClick);
             this.RoleViewGrid.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RoleViewGrid_CellDoubleClick);
@@ -157,11 +161,62 @@ namespace UASIP.Forms
             this.SearchButton.UseVisualStyleBackColor = false;
             this.SearchButton.Click += new System.EventHandler(this.button1_Click);
             // 
+            // PrRageButton
+            // 
+            this.PrRageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.PrRageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrRageButton.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.PrRageButton.Location = new System.Drawing.Point(594, 431);
+            this.PrRageButton.Name = "PrRageButton";
+            this.PrRageButton.Size = new System.Drawing.Size(26, 26);
+            this.PrRageButton.TabIndex = 20;
+            this.PrRageButton.Text = "<";
+            this.PrRageButton.UseVisualStyleBackColor = false;
+            this.PrRageButton.Click += new System.EventHandler(this.PrRageButton_Click);
+            // 
+            // NxPageButton
+            // 
+            this.NxPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.NxPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NxPageButton.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.NxPageButton.Location = new System.Drawing.Point(626, 431);
+            this.NxPageButton.Name = "NxPageButton";
+            this.NxPageButton.Size = new System.Drawing.Size(26, 26);
+            this.NxPageButton.TabIndex = 19;
+            this.NxPageButton.Text = ">";
+            this.NxPageButton.UseVisualStyleBackColor = false;
+            this.NxPageButton.Click += new System.EventHandler(this.NxPageButton_Click);
+            // 
+            // PageNum
+            // 
+            this.PageNum.AutoSize = true;
+            this.PageNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PageNum.Location = new System.Drawing.Point(-188, 393);
+            this.PageNum.Name = "PageNum";
+            this.PageNum.Size = new System.Drawing.Size(53, 20);
+            this.PageNum.TabIndex = 18;
+            this.PageNum.Text = "label2";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.ForeColor = System.Drawing.Color.PaleTurquoise;
+            this.label2.Location = new System.Drawing.Point(12, 437);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "label2";
+            // 
             // RoleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 433);
+            this.ClientSize = new System.Drawing.Size(664, 475);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.PrRageButton);
+            this.Controls.Add(this.NxPageButton);
+            this.Controls.Add(this.PageNum);
             this.Controls.Add(this.SearchButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.RoleSearchingBox);
@@ -193,5 +248,9 @@ namespace UASIP.Forms
         private System.Windows.Forms.Button SearchButton;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
+        private System.Windows.Forms.Button PrRageButton;
+        private System.Windows.Forms.Button NxPageButton;
+        private System.Windows.Forms.Label PageNum;
+        private System.Windows.Forms.Label label2;
     }
 }

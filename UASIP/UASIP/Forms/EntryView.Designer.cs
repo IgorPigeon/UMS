@@ -34,6 +34,9 @@ namespace UASIP.Forms
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.refreshToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.EntryViewGrid = new System.Windows.Forms.DataGridView();
+            this.PrRageButton = new System.Windows.Forms.Button();
+            this.NxPageButton = new System.Windows.Forms.Button();
+            this.PageNum = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EntryViewGrid)).BeginInit();
             this.SuspendLayout();
@@ -90,14 +93,51 @@ namespace UASIP.Forms
             this.EntryViewGrid.RowHeadersWidth = 51;
             this.EntryViewGrid.RowTemplate.Height = 24;
             this.EntryViewGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.EntryViewGrid.Size = new System.Drawing.Size(640, 375);
+            this.EntryViewGrid.Size = new System.Drawing.Size(640, 324);
             this.EntryViewGrid.TabIndex = 2;
+            // 
+            // PrRageButton
+            // 
+            this.PrRageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.PrRageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PrRageButton.Location = new System.Drawing.Point(594, 376);
+            this.PrRageButton.Name = "PrRageButton";
+            this.PrRageButton.Size = new System.Drawing.Size(26, 26);
+            this.PrRageButton.TabIndex = 20;
+            this.PrRageButton.Text = "<";
+            this.PrRageButton.UseVisualStyleBackColor = false;
+            this.PrRageButton.Click += new System.EventHandler(this.PrRageButton_Click);
+            // 
+            // NxPageButton
+            // 
+            this.NxPageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(39)))), ((int)(((byte)(52)))));
+            this.NxPageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NxPageButton.Location = new System.Drawing.Point(626, 376);
+            this.NxPageButton.Name = "NxPageButton";
+            this.NxPageButton.Size = new System.Drawing.Size(26, 26);
+            this.NxPageButton.TabIndex = 19;
+            this.NxPageButton.Text = ">";
+            this.NxPageButton.UseVisualStyleBackColor = false;
+            this.NxPageButton.Click += new System.EventHandler(this.NxPageButton_Click);
+            // 
+            // PageNum
+            // 
+            this.PageNum.AutoSize = true;
+            this.PageNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PageNum.Location = new System.Drawing.Point(12, 382);
+            this.PageNum.Name = "PageNum";
+            this.PageNum.Size = new System.Drawing.Size(53, 20);
+            this.PageNum.TabIndex = 18;
+            this.PageNum.Text = "label2";
             // 
             // EntryView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 433);
+            this.ClientSize = new System.Drawing.Size(664, 419);
+            this.Controls.Add(this.PrRageButton);
+            this.Controls.Add(this.NxPageButton);
+            this.Controls.Add(this.PageNum);
             this.Controls.Add(this.EntryViewGrid);
             this.Controls.Add(this.menuStrip1);
             this.Name = "EntryView";
@@ -118,5 +158,8 @@ namespace UASIP.Forms
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem refreshToolStripMenuItem;
         private System.Windows.Forms.DataGridView EntryViewGrid;
+        private System.Windows.Forms.Button PrRageButton;
+        private System.Windows.Forms.Button NxPageButton;
+        private System.Windows.Forms.Label PageNum;
     }
 }

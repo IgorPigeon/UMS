@@ -9,11 +9,12 @@ namespace UASIP.Forms
 {
     public partial class RoleView : Template
     {
+        int pageNum = 1;
+
         public RoleView()
         {
             InitializeComponent();
-            RoleViewGrid.DataSource = roleService.UpdateData().ToList();
-            RoleViewGrid.Columns[0].Visible = false;
+            ToDataGrid(pageNum);
         }
 
         private readonly RoleService roleService = new RoleService();
@@ -56,8 +57,7 @@ namespace UASIP.Forms
         // Refresh              Done
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            RoleViewGrid.DataSource = roleService.UpdateData().ToList();
-            RoleViewGrid.Columns[0].Visible = false;
+            ToDataGrid(pageNum);
             RoleSearchingBox.Clear();
             RoleSearchingBox.Focus();
         }
@@ -67,8 +67,7 @@ namespace UASIP.Forms
         {
             Roles rform = new Roles();
             rform.ShowDialog();
-            RoleViewGrid.DataSource = roleService.UpdateData().ToList();
-            RoleViewGrid.Columns[0].Visible = false;
+            ToDataGrid(pageNum);
         }
 
         // Selection            Done
@@ -82,9 +81,7 @@ namespace UASIP.Forms
                 roles.RoleID = roleId;
                 roles.IsUpdated = true;
                 roles.ShowDialog();
-
-                RoleViewGrid.DataSource = roleService.UpdateData().ToList();
-                RoleViewGrid.Columns[0].Visible = false;
+                ToDataGrid(pageNum);
             }
         }
 
@@ -98,6 +95,65 @@ namespace UASIP.Forms
             }
 
             return true;
+        }
+
+        private void PrRageButton_Click(object sender, EventArgs e)
+        {
+            pageNum -= 1;
+            ToDataGrid(pageNum);
+        }
+
+        private void NxPageButton_Click(object sender, EventArgs e)
+        {
+            pageNum += 1;
+            ToDataGrid(pageNum);
+        }
+
+        public void Arrows(int pageNum, List<RoleObject> list)
+        {
+            if (pageNum == 1)
+            {
+                PrRageButton.Enabled = false;
+                if (pageNum > list.Count / 10)
+                {
+                    NxPageButton.Enabled = false;
+                }
+                else
+                {
+                    NxPageButton.Enabled = true;
+                }
+            }
+            else
+            {
+                PrRageButton.Enabled = true;
+                if (pageNum > list.Count / 10)
+                {
+                    NxPageButton.Enabled = false;
+                }
+                else
+                {
+                    NxPageButton.Enabled = true;
+                }
+            }
+        }
+
+        public void ToDataGrid(int pageNum)
+        {
+            List<RoleObject> list = roleService.UpdateData().ToList();
+            int take;
+            if (pageNum > list.Count / 10)
+            {
+                take = list.Count % 10;
+            }
+            else
+            {
+                take = 10;
+            }
+
+            RoleViewGrid.DataSource = list.Skip(pageNum * 10 - 10).Take(take).ToList();
+            Arrows(pageNum, list);
+            PageNum.Text = "Page: " + pageNum.ToString();
+            RoleViewGrid.Columns[0].Visible = false;
         }
     }
 }

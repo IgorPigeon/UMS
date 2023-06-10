@@ -20,3 +20,25 @@ C:\Users\kazak\OneDrive\Рабочий стол\UASIP\UASIP\bin\Debug\EntityFram
 C:\Users\kazak\OneDrive\Рабочий стол\UASIP\UASIP\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\kazak\OneDrive\Рабочий стол\UASIP\UASIP\obj\Debug\UASIP.csproj.CopyComplete
 C:\Users\kazak\OneDrive\Рабочий стол\UASIP\UASIP\obj\Debug\UASIP.Forms.EntryView.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\UASIP.exe.config
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\UASIP.exe
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\UASIP.pdb
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\EntityFramework.dll
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\EntityFramework.xml
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.csproj.AssemblyReference.cache
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.EntryView.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.Login.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.Main.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.Roles.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.RoleView.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.Template.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.User.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Forms.UserView.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.Properties.Resources.resources
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.csproj.GenerateResource.cache
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.csproj.CoreCompileInputs.cache
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.csproj.CopyComplete
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.exe
+C:\Users\kazak\OneDrive\Документы\GitHub\UMS\UASIP\UASIP\obj\Debug\UASIP.pdb
