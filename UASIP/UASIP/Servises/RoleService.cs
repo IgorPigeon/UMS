@@ -19,7 +19,7 @@ namespace UASIP.Servises
         public IEnumerable<RoleObject> SearchRole(string roleName)
         {
             IEnumerable<RoleObject> roleList = roleRepos.SearchRole(roleName);
-            
+
             return roleList;
         }
 
@@ -42,7 +42,7 @@ namespace UASIP.Servises
             roleObject.CreatedBy = "Admin";
 
             bool isExist = roleRepos.Check(roleName);
-            if((!isExist) || (oldRoleID == roleID))
+            if ((!isExist) || (oldRoleID == roleID))
             {
                 if (!isUpdated)
                 {
@@ -64,7 +64,7 @@ namespace UASIP.Servises
             roleRepos.Delete(roleID);
             string messageBox = "Role deleted.";
 
-            return messageBox; 
+            return messageBox;
         }
     }
 }

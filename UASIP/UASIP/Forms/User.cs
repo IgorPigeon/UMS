@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using UASIP.General;
@@ -43,30 +42,30 @@ namespace UASIP.Forms
         {
             UserComboBox.DataSource = roleService.UpdateData().ToList();
             UserComboBox.DisplayMember = "RoleName";
-            UserComboBox.ValueMember = "RoleID";                
+            UserComboBox.ValueMember = "RoleID";
         }
 
         private void label2_Click(object sender, EventArgs e)
-        {  }
+        { }
 
         private void RoleDescBox_TextChanged(object sender, EventArgs e)
-        {  }
+        { }
 
         private void RoleNameBox_TextChanged(object sender, EventArgs e)
-        {  }
+        { }
 
         private void label1_Click(object sender, EventArgs e)
-        {  }
+        { }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {  }
+        { }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {  }
+        { }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e) {  }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) { }
 
-        private void RoleComboBox_SelectedIndexChanged(object sender, EventArgs e) {  }
+        private void RoleComboBox_SelectedIndexChanged(object sender, EventArgs e) { }
 
         private void SaveButton_Click(object sender, EventArgs e)
         {
@@ -79,7 +78,7 @@ namespace UASIP.Forms
                 string description = DescUserBox.Text.Trim();
                 DateTime birthTime = DateTimePicker.Value;
                 string messageBox = userService.SaveUser(this.UserName, IsUpdated, userPass, roleID, isActive, userName, description, birthTime);
-                
+
                 if (messageBox == "Such user is already exist!")
                 {
                     MessageBox.Show(messageBox, "Validation error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,9 +91,9 @@ namespace UASIP.Forms
             }
         }
 
-        private void label4_Click(object sender, EventArgs e) {  }
+        private void label4_Click(object sender, EventArgs e) { }
 
-        private void DateTimePicker_ValueChanged(object sender, EventArgs e) {  }
+        private void DateTimePicker_ValueChanged(object sender, EventArgs e) { }
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
@@ -112,9 +111,10 @@ namespace UASIP.Forms
             }
         }
 
-        private void DescUserBox_TextChanged(object sender, EventArgs e) {  }
+        private void DescUserBox_TextChanged(object sender, EventArgs e) { }
 
-        private void closeToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 

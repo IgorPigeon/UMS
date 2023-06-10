@@ -13,6 +13,5 @@ namespace UASIP.Repos
         void Delete(string name);
         void Save(T item);
         bool Check(string name);
-
     }
 }

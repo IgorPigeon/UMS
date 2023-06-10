@@ -8,6 +8,5 @@ namespace UASIP.Repos
     {
         IEnumerable<T> GetEntryList();
         void Save(T item);
-
     }
 }

@@ -19,6 +19,7 @@ namespace UASIP.Repos
         public IEnumerable<UserObject> GetUserList()
         {
             db = new UserContext();
+
             return db.UserObjects;
         }
 
@@ -50,7 +51,6 @@ namespace UASIP.Repos
             userInDb.RoleID = userObject.RoleID;
             userInDb.DateBirth = userObject.DateBirth;
 
-
             db.Entry(userInDb).State = EntityState.Modified;
             await db.SaveChangesAsync();
         }
@@ -80,9 +80,9 @@ namespace UASIP.Repos
 
         public virtual void Dispose(bool disposing)
         {
-            if(!this.disposed)
+            if (!this.disposed)
             {
-                if(disposing)
+                if (disposing)
                 {
                     db.Dispose();
                 }

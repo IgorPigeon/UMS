@@ -5,8 +5,7 @@ namespace UASIP.Repos
 {
     class RoleContext : DbContext
     {
-        public RoleContext() : base("ums") {  }
-
+        public RoleContext() : base("ums") { }
         public DbSet<RoleObject> RoleObjects { get; set; }
     }
 }

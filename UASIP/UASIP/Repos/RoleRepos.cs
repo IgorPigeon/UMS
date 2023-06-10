@@ -18,6 +18,7 @@ namespace UASIP.Repos
         public IEnumerable<RoleObject> GetRoleList()
         {
             db = new RoleContext();
+
             return db.RoleObjects;
         }
 
@@ -69,9 +70,9 @@ namespace UASIP.Repos
 
         public virtual void Dispose(bool disposing)
         {
-            if(!this.disposed)
+            if (!this.disposed)
             {
-                if(disposing)
+                if (disposing)
                 {
                     db.Dispose();
                 }

@@ -3,7 +3,6 @@ using System.ComponentModel.DataAnnotations;
 
 namespace UASIP.General
 {
-
     public class RoleObject
     {
         [Key]

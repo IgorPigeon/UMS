@@ -19,11 +19,10 @@ namespace UASIP.Forms
 
         private readonly RoleService roleService = new RoleService();
 
-        private void RoleView_Load(object sender, EventArgs e) {  }
+        private void RoleView_Load(object sender, EventArgs e) { }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) {  }
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
 
-        // Close                Done
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -31,19 +30,18 @@ namespace UASIP.Forms
             main.ShowDialog();
         }
 
-        private void RoleViewGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) {  }
+        private void RoleViewGrid_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        private void label1_Click(object sender, EventArgs e) {  }
+        private void label1_Click(object sender, EventArgs e) { }
 
-        private void textBox1_TextChanged(object sender, EventArgs e) {  }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
 
-        // Search               Done
         private void button1_Click(object sender, EventArgs e)
         {
-            if(IsFormValid())
+            if (IsFormValid())
             {
                 IEnumerable<RoleObject> roleList = roleService.SearchRole(RoleSearchingBox.Text.Trim());
-                if(roleList != null)
+                if (roleList != null)
                 {
                     RoleViewGrid.DataSource = roleList;
                 }
@@ -54,7 +52,6 @@ namespace UASIP.Forms
             }
         }
 
-        // Refresh              Done
         private void refreshToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ToDataGrid(pageNum);
@@ -62,7 +59,6 @@ namespace UASIP.Forms
             RoleSearchingBox.Focus();
         }
 
-        // New role             Done
         private void newRoleToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Roles rform = new Roles();
@@ -70,10 +66,9 @@ namespace UASIP.Forms
             ToDataGrid(pageNum);
         }
 
-        // Selection            Done
         private void RoleViewGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(RoleViewGrid.Rows.Count > 0)
+            if (RoleViewGrid.Rows.Count > 0)
             {
                 int roleId = Convert.ToInt32(RoleViewGrid.SelectedRows[0].Cells[0].Value);
 

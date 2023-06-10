@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
 using UASIP.General;
 
 namespace UASIP.Repos
@@ -31,9 +29,9 @@ namespace UASIP.Repos
 
         public virtual void Dispose(bool disposing)
         {
-            if(!this.disposed)
+            if (!this.disposed)
             {
-                if(disposing)
+                if (disposing)
                 {
                     db.Dispose();
                 }

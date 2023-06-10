@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 using UASIP.General;
@@ -22,7 +21,7 @@ namespace UASIP.Forms
         {
             List<UserObject> list = userService.UpdateData().ToList();
             int take;
-            if(pageNum > list.Count / 10)
+            if (pageNum > list.Count / 10)
             {
                 take = list.Count % 10;
             }
@@ -81,7 +80,6 @@ namespace UASIP.Forms
             UserSearchingBox.Focus();
         }
 
-        // Open                 Done
         private void UserViewGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (UserViewGrid.Rows.Count > 0)
@@ -113,11 +111,11 @@ namespace UASIP.Forms
             return true;
         }
 
-        private void UserView_Load(object sender, EventArgs e) {  }
+        private void UserView_Load(object sender, EventArgs e) { }
 
-        private void UserView_Load_1(object sender, EventArgs e) {  }
+        private void UserView_Load_1(object sender, EventArgs e) { }
 
-        private void label4_Click(object sender, EventArgs e) {  }
+        private void label4_Click(object sender, EventArgs e) { }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -159,6 +157,6 @@ namespace UASIP.Forms
             }
         }
 
-        private void PageNum_Click(object sender, EventArgs e) {  }
+        private void PageNum_Click(object sender, EventArgs e) { }
     }
 }

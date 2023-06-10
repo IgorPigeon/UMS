@@ -16,9 +16,9 @@ namespace UASIP.Forms
         public bool IsUpdated { get; set; }
 
         private readonly RoleService roleService = new RoleService();
-        private void label1_Click(object sender, EventArgs e) {  }
+        private void label1_Click(object sender, EventArgs e) { }
 
-        private void label2_Click(object sender, EventArgs e) {  }
+        private void label2_Click(object sender, EventArgs e) { }
 
         // Close                Done
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -29,7 +29,7 @@ namespace UASIP.Forms
         // Save                 Done
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(IsFormValid())
+            if (IsFormValid())
             {
                 int roleID = this.RoleID;
                 string roleName = RoleNameBox.Text.Trim();
@@ -48,10 +48,9 @@ namespace UASIP.Forms
             }
         }
 
-        // Load                 Done
         private void Roles_Load(object sender, EventArgs e)
         {
-            if(this.IsUpdated)
+            if (this.IsUpdated)
             {
                 RoleObject roleObject = roleService.LoadRole(RoleID);
                 RoleNameBox.Text = roleObject.RoleName;
@@ -61,10 +60,9 @@ namespace UASIP.Forms
             }
         }
 
-        // Delete               Done
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            if(this.IsUpdated)
+            if (this.IsUpdated)
             {
                 DialogResult delRes = MessageBox.Show("Are you really want to delete?", "Confirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -106,8 +104,8 @@ namespace UASIP.Forms
             return true;
         }
 
-        private void RoleNameBox_TextChanged(object sender, EventArgs e) {  }
+        private void RoleNameBox_TextChanged(object sender, EventArgs e) { }
 
-        private void RoleDescBox_TextChanged(object sender, EventArgs e) {  }
+        private void RoleDescBox_TextChanged(object sender, EventArgs e) { }
     }
 }
